@@ -20,26 +20,29 @@
         </div>
         <div class="select">
           <h4 class="font-Rokkitt">Elige tu sede:</h4>
-          <select class="" name="">
-            <option value="" selected="">Lima</option>
-            <option value="">Mexico</option>
+          <select class="paises" name="paises">
+            <option value="0" selected="">Seleccione</option>
+            <option value="1" >Lima</option>
+            <option value="2">Mexico</option>
           </select>
           <label for="points" class="font-Rokkitt">Puntos:</label>
-          <input type="text" name="points">
+          <input type="text" name="points" readonly>
         </div>
         <div class="flex">
           <div class="detail-img">
-            <img src="assets/img/mexico/AlmaPatriciaJimenez.JPG" alt="">
           </div>
           <div class=" detail-name gray-dark">
             <label for="name">Ingresa su nombre : </label>
-            <input type="text" name="name" placeholder="Nombre">
-            <button type="button" name="button">COMPROBAR</button>
+            <input type="text" name="name" class="name" placeholder="Nombre">
+            <button type="button" id="comprobar" name="button">COMPROBAR</button>
           </div>
         </div>
       </div>
     </section>
     <script src="assets/js/vendor/jquery-3.2.1.min.js" charset="UTF-8"></script>
+    <script src="assets/js/peru.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="assets/js/mexico.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="assets/js/coder.js" type="text/javascript" charset="UTF-8"></script>
     <script src="assets/js/main.js" type="text/javascript" charset="UTF-8"></script>
   </body>
 </html>

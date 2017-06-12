@@ -1,24 +1,50 @@
-"use strict";
-$( _ =>{
+'use strict';
 
-  $(function() {
-    var screenVal =$("input:text");
-    
-    $("input:button").on("click",function(){
-      var eachNumber =$(this).val();
-      var currentScreen=screenVal.val();
-      currentScreen += eachNumber;
-      screenVal.val(currentScreen);
-      if($(this).val()=="C"){
-        screenVal.val("");
+  const render = (root) => {
+    root.empty();
+    const wrapper = $('<img class="wrapper"></img>');
+    var  points =$(".points");
+    //Append de componentes
+    var paises=$(".paises");
+    if (paises.val()== 0){
+      alert("Seleccione una opcion");
+    } else {
+
+    };
+
+    $( ".paises" ).change(function() {
+      if(paises.val()==1){
+        $(".wrapper").attr({src: "assets/img/peru/"+ peru[Math.floor(Math.random()*peru.length)].image, alt: "" });
+
+      }else if(paises.val()==2){
+        $(".wrapper").attr({src: "assets/img/mexico/"+ mexico[Math.floor(Math.random()*mexico.length)].image, alt: "" });
       }
     });
+    root.append(wrapper);
 
-    $("button").click(function(event){
+    $("#comprobar").click(function(event){
       event.preventDefault();
-      screenVal.val(eval(screenVal.val()));
+      var puntos=0;
+      var  name =$(".name");
+      if (paises.val()==1){
+        if (peru.name.toLowerCase()==name.val().toLowerCase()){
+          puntos += 5;
+          points.val(puntos);
+        } else{
+            alert("Se equivoco de Coder ;(")
+        }
+      }else if (paises.val()==2) {
+
+      }
     })
-    //Aqui cierra la funcion
-  })
-  //Aqui cierra el ready
-});
+
+  };
+
+
+
+
+  $( _ => {
+
+    const root = $('.detail-img');
+    render(root);
+  });
