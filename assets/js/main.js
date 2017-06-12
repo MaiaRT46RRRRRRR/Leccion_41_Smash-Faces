@@ -25,9 +25,9 @@
     $("#comprobar").click(function(event){
       event.preventDefault();
       var puntos=0;
-      var  name =$(".name");
+      var  names =$(".name");
       if (paises.val()==1){
-        if (peru.name.toLowerCase()==name.val().toLowerCase()){
+        if (peru.name.toLowerCase()==names.val().toLowerCase()){
           puntos += 5;
           points.val(puntos);
         } else{
